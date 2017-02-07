@@ -52,42 +52,7 @@
         };
 
 
-        var notify = function(){
-          return new Promise(function(resolve, reject) {
-
-            var xhr = new XMLHttpRequest();
-            xhr.setRequestHeader("Content-type", "application/json");
-            xhr.setRequestHeader("Authorization", "key=AAAA_B_PjEY:APA91bGj_mQh2L9aT2SC_UNsoTN8AeXaH0LfFEDmMdk648Sv5R5ebg7SZpDPu9-fll8s3hdyoLCVE4UB0W90rNpiqr-1R7XRqme1C5Gu1V6KzU1KO3iuQtEQ1WiJgibqLWZoWER8Izjm");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var result = xhr.responseText
-                        result = JSON.parse(result);
-                        resolve(result);
-                    } else {
-                        reject(xhr);
-                    }
-                }
-            };
-            
-            xhr.open("POST", "https://fcm.googleapis.com/fcm/send", true);
-
-            var body = JSON.stringify({ "notification": {
-                            "title": "Portugal vs. Denmark",
-                            "body": "5 to 1"
-                          },
-                          "to" : "bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1..."
-                        });
-            xhr.send();
-
-          }); 
-
-
-        }
-
-
-
-
+      
    
 
 
