@@ -1,0 +1,17 @@
+{
+  "short_name": "PWA-TEST",
+  "name": "First Simple PWA",
+  "icons": [
+   {
+      "src": "images/main.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#2196F3",
+  "background_color": "#2196F3",
+  "gcm_sender_id": "1082865454150"
+}

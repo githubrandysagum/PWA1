@@ -19,50 +19,69 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather PWA</title>
+  <meta name="theme-color" content="#db5945">
+  <title>PWA Simple app</title>
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
-
+  <link rel="manifest" href="/manifest.json">
   <!-- TODO add manifest here -->
-  
+ 
 </head>
 <body>
 
   <header class="header">
-    <h1 class="header__title">PWA SIMPLE SITE</h1>
-    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
-    <button id="butAdd" class="headerButton" aria-label="Add"></button>
-    <style>
-      img{
-        width : 300px;
-       
-      }
-    </style>
+    <h2 class="header__title">PWA</h2>
+   
+  
+    
   </header>
 
   <main class="main">
-    <!--<img src="" id="image1" alt="image1">-->
-      <div id="listuser">
-         
-      </div>
-
+    <img src="./images/main.png" alt="main image" class="banner">
+   
+    
+    <button disabled id="push_button" class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      Enable Push Messaging
+    </button>
+   
+    <section class="subscription-details js-subscription-details is-invisible">
+      <a href="https://web-push-codelab.appspot.com/">Push Companion Site</a>
+      <pre><code class="js-subscription-json"></code></pre>
+    </section>
+    <div class="newpost">
+      <label for="post_title">Title</label>
+      <br>
+      <input type='text' id="post_title" class="post_title">
+      <br>
+      <label for="post_body">Content</label>
+      <br>
+      <textarea id="post_body" class="post_body"></textarea>
+      <button id='butt_post' class="butt_post">Post</button>
+    </div>
+   
+   
+     <div id="listuser">
+    </div>
 
   </main>
 
+  
+
  
 
-  <div class="loader">
+  <!--<div class="loader">
     <svg viewBox="0 0 32 32" width="32" height="32">
       <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
     </svg>
-  </div>
+  </div>-->
 
   <!-- Uncomment the line below when ready to test with fake data -->
   
  
-  
+  <!--<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+  <script src="scripts/firebase.js" async></script>-->
   <script src="scripts/app.js" async></script>
+ 
 
 </body>
 </html>
